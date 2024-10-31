@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semaforo</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script type="module" src="./src/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="window">
+      <select class="route" name="route" id="routes">
+        <option value="30">Rua A - 30 km/h</option>
+        <option value="50">Avenida B - 50 km/h</option>
+        <option value="80">Rodovia C - 80 km/h</option>
+      </select>
+
+      <div id="trafficLight" class="trafficLight">
+        <span id="redLight" class="traffic traffic-red"></span>
+        <span id="yellowLight" class="traffic traffic-yellow"></span>
+        <span id="greenLight" class="traffic traffic-green"></span>
+      </div>
+
+      <div class="speedometer-container">
+        <div class="center-point"></div>
+        <div class="speedometer-center-hide"></div>
+        <div class="speedometer-bottom-hide"></div>
+        <div class="arrow-container">
+          <div id="arrow-wrapper" class="arrow-wrapper speed-0">
+            <div class="arrow"></div>
+          </div>
+        </div>
+        <div class="speedometer-scale speedometer-scale-1"></div>
+        <div class="speedometer-scale speedometer-scale-2"></div>
+        <div class="speedometer-scale speedometer-scale-3"></div>
+        <div class="speedometer-scale speedometer-scale-4"></div>
+        <div class="speedometer-scale speedometer-scale-5"></div>
+        <div class="speedometer-scale speedometer-scale-6"></div>
+        <div class="speedometer-scale speedometer-scale-7"></div>
+        <div class="speedometer-scale speedometer-scale-8"></div>
+        <div class="speedometer-scale speedometer-scale-9"></div>
+        <div class="speedometer-scale speedometer-scale-10"></div>
+        <div class="speedometer-scale speedometer-scale-11"></div>
+        <div class="speedometer-scale speedometer-scale-12"></div>
+        <div class="speedometer-scale speedometer-scale-13"></div>
+        <div class="speedometer-scale speedometer-scale-14"></div>
+        <div class="speedometer-scale speedometer-scale-15"></div>
+        <div class="speedometer-scale speedometer-scale-16"></div>
+        <div class="speedometer-scale speedometer-scale-17"></div>
+        <div class="speedometer-scale speedometer-scale-18"></div>
+      </div>
+
+      <div id="display" class="display">
+        <span>00</span>
+        <span>:</span>
+        <span>00</span>
+      </div>
+
+      <div class="street">
+        <div class="street-line"></div>
+        <div class="street-line-1"></div>
+        <img id="car" class="car" src="./assets/car.png" />
+        <div class="street-line-2"></div>
+        <div class="street-line-3"></div>
+        <div class="street-line-4"></div>
+        <div class="street-line-5"></div>
+        <div class="street-line-6"></div>
+        <div class="street-line-7"></div>
+        <div class="street-line-8"></div>
+        <div class="street-line-9"></div>
+        <div class="street-line-10"></div>
+        <div class="street-line-11"></div>
+      </div>
+
+      <section id="controls">
+        <button data-action="play" id="play" class="play">Play</button>
+
+        <button
+          accesskey="X"
+          data-action="accelerate"
+          id="accelerate"
+          class="accelerate"
+        >
+          acelerar
+        </button>
+        <button
+          accesskey="C"
+          data-action="slowDown"
+          id="slowDown"
+          class="slowDown"
+        >
+          desacelerar
+        </button>
+      </section>
+    </main>
+  </body>
+</html>

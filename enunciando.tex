@@ -1,0 +1,53 @@
+Desafio: Simulador de Radar de VelocidadeObjetivo:
+Criar uma página web que simula um radar de velocidade com um semáforo. O objetivo é seguir as regras de trânsito: respeitar o semáforo, não ultrapassar a velocidade máxima permitida para cada via e não ficar parado no semáforo verde por muito tempo.
+Requisitos:
+Seleção de Via:
+Um elemento <select> que permite ao usuário escolher entre diferentes vias com limites de velocidade específicos.
+As opções devem ser:
+Rua A - 30 km/h
+Avenida B - 50 km/h
+Rodovia C - 80 km/h
+Semáforo:
+O semáforo deve ter três luzes: vermelho, amarelo e verde.
+O semáforo começa no vermelho.
+O semáforo muda de vermelho para verde em 3 segundos.
+O semáforo muda de verde para amarelo em um tempo aleatório entre 15 e 25 segundos.
+O semáforo muda de amarelo para vermelho em 10 segundos.
+Controle de Velocidade:
+Dois botões: "Acelerar (X)" e "Desacelerar (C)".
+Cada vez que o botão "Acelerar" é pressionado, a velocidade aumenta em 10 km/h.
+Cada vez que o botão "Desacelerar" é pressionado, a velocidade diminui em 10 km/h.
+A velocidade não pode ser negativa.
+Regras do Semáforo:
+Quando o semáforo está vermelho, o carro deve estar parado (0 km/h).
+Se o semáforo está vermelho e o carro não está parado, o usuário recebe uma multa e o jogo reinicia.
+Quando o semáforo está verde, o carro pode andar. Se a velocidade do carro ficar em 0 km/h por 10 segundos consecutivos com o semáforo verde, o usuário recebe uma multa e o jogo reinicia.
+Quando o semáforo está amarelo, o usuário deve se preparar para parar.
+Se o semáforo está vermelho e o carro está andando, o usuário recebe uma multa e o jogo reinicia.
+Limite de Velocidade:
+Se a velocidade do carro ultrapassar o limite permitido para a via selecionada, o usuário recebe uma multa e o jogo reinicia.
+Passo a Passo para o Desenvolvimento1. Estrutura HTML
+Criação do elemento <select>:
+Adicionar opções de vias com limites de velocidade.
+Criação do semáforo:
+Usar div para representar cada luz do semáforo.
+Criação dos botões de controle:
+Botões para acelerar e desacelerar.
+Criação da área de status:
+Mostrar a velocidade atual e o estado do carro (parado ou andando).
+2. Estilo CSS
+Estilo do semáforo:
+Estilizar as luzes para que sejam claramente visíveis.
+Estilo dos botões e status:
+Estilizar os botões e a área de status para que sejam fáceis de usar e ler.
+3. Lógica JavaScript
+Inicialização das variáveis:
+Variáveis para controlar a velocidade, o limite de velocidade, o estado do semáforo e os temporizadores.
+Funções de controle do semáforo:
+Funções para mudar a cor do semáforo e controlar o tempo de cada estado.
+Funções de controle da velocidade:
+Funções para aumentar e diminuir a velocidade do carro.
+Funções de verificação de regras:
+Funções para verificar se o carro está respeitando as regras de velocidade e semáforo.
+Função de reinicialização do jogo:
+Função para reiniciar o jogo em caso de infração.

@@ -1,0 +1,436 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+.window {
+  display: grid;
+
+  /* grid-template-columns: 1fr, 1fr, 1fr; */
+  /* grid-template-rows: 20rem, 60rem, 10rem; */
+  row-gap: 2rem;
+  height: 62rem;
+  width: 60rem;
+
+  background-color: rgb(5, 29, 53);
+
+  margin: 1px;
+  border: 1px solid red;
+
+  margin-top: 0;
+  overflow: hidden;
+}
+
+#routes {
+  height: 3rem;
+  width: 18rem;
+  display: flex;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+  justify-self: end;
+  border-radius: 3rem;
+}
+
+.speedometer-container {
+  width: 12rem;
+  height: 12rem;
+  border: 0.3rem solid black;
+  border-radius: 50%;
+  margin: 0.5rem auto;
+
+  position: relative;
+}
+
+.center-point {
+  height: 01rem;
+  width: 01rem;
+  border-radius: 50%;
+  background-color: rgb(148, 28, 148);
+  position: absolute;
+  top: 5rem;
+  left: 5.1rem;
+  z-index: 10;
+}
+
+.speedometer-scale {
+  width: 0.3rem;
+  height: 11rem;
+  background-color: rgb(243, 247, 37);
+  position: absolute;
+  left: 5.5rem;
+  top: 0.3rem;
+  transform: rotate(-90deg);
+}
+.speedometer-scale-1 {
+  transform: rotate(-80deg);
+}
+.speedometer-scale-2 {
+  transform: rotate(-70deg);
+}
+.speedometer-scale-3 {
+  transform: rotate(-60deg);
+}
+.speedometer-scale-4 {
+  transform: rotate(-50deg);
+}
+.speedometer-scale-5 {
+  transform: rotate(-40deg);
+}
+.speedometer-scale-6 {
+  transform: rotate(-30deg);
+}
+.speedometer-scale-7 {
+  transform: rotate(-20deg);
+}
+.speedometer-scale-8 {
+  transform: rotate(-10deg);
+}
+.speedometer-scale-9 {
+  transform: rotate(-0deg);
+}
+.speedometer-scale-10 {
+  transform: rotate(10deg);
+}
+.speedometer-scale-11 {
+  transform: rotate(20deg);
+}
+.speedometer-scale-12 {
+  transform: rotate(30deg);
+}
+.speedometer-scale-13 {
+  transform: rotate(40deg);
+}
+.speedometer-scale-14 {
+  transform: rotate(50deg);
+}
+.speedometer-scale-15 {
+  transform: rotate(60deg);
+}
+.speedometer-scale-16 {
+  transform: rotate(70deg);
+}
+.speedometer-scale-17 {
+  transform: rotate(80deg);
+}
+.speedometer-scale-18 {
+  transform: rotate(90deg);
+}
+
+.speedometer-center-hide {
+  width: 9rem;
+  height: 9rem;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  z-index: 9;
+}
+
+.speedometer-bottom-hide {
+  width: 13rem;
+  height: 8rem;
+  background-color: rgb(5, 29, 53);
+
+  position: absolute;
+  top: 6.1rem;
+  left: -0.8rem;
+  z-index: 11;
+  border-top: 0.1rem solid black;
+}
+
+.arrow-container {
+  width: 6rem;
+  height: 6rem;
+  background-color: transparent;
+  position: absolute;
+  z-index: 12;
+  top: 2.8rem;
+  left: 2.4rem;
+}
+
+.arrow-wrapper {
+  width: 6rem;
+  height: 6rem;
+  background-color: transparent;
+  position: relative;
+  transition: all 0.8s;
+}
+
+.arrow {
+  width: 5rem;
+  height: 0.1rem;
+  background-color: #85159b;
+  position: absolute;
+  top: 2.7rem;
+  left: -2.2rem;
+}
+
+.speed-0 {
+  transform: rotate(0deg);
+}
+.speed-10 {
+  transform: rotate(10deg);
+}
+.speed-20 {
+  transform: rotate(20deg);
+}
+.speed-30 {
+  transform: rotate(30deg);
+}
+.speed-40 {
+  transform: rotate(40deg);
+}
+.speed-50 {
+  transform: rotate(50deg);
+}
+.speed-60 {
+  transform: rotate(60deg);
+}
+.speed-70 {
+  transform: rotate(70deg);
+}
+.speed-80 {
+  transform: rotate(80deg);
+}
+.speed-90 {
+  transform: rotate(90deg);
+}
+.speed-100 {
+  transform: rotate(100deg);
+}
+.speed-110 {
+  transform: rotate(110deg);
+}
+.speed-120 {
+  transform: rotate(120deg);
+}
+.speed-130 {
+  transform: rotate(130deg);
+}
+.speed-140 {
+  transform: rotate(140deg);
+}
+.speed-150 {
+  transform: rotate(150deg);
+}
+.speed-160 {
+  transform: rotate(160deg);
+}
+.speed-170 {
+  transform: rotate(170deg);
+}
+.speed-180 {
+  transform: rotate(180deg);
+}
+
+.trafficLight {
+  background-color: rgb(77, 73, 73);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+
+  justify-self: start;
+  height: 20rem;
+  width: 5.5rem;
+  gap: 1rem;
+
+  margin-left: 2rem;
+  border: 0.3rem solid black;
+}
+
+.traffic {
+  display: flex;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 100%;
+}
+
+#redLight {
+  background-color: rgba(255, 0, 0, 0.397);
+}
+
+#yellowLight {
+  background-color: rgba(255, 255, 0, 0.452);
+}
+#greenLight {
+  background-color: rgba(3, 51, 3, 0.377);
+}
+
+.street {
+  display: flex;
+  background-color: black;
+  height: 12rem;
+  width: auto;
+  justify-content: space-around;
+  position: relative;
+}
+
+.street-line {
+  height: 0.3rem;
+  width: 2rem;
+  background-color: yellow;
+  margin-top: 6rem;
+}
+.street-line-1 {
+  height: 0.3rem;
+  width: 2rem;
+  background-color: yellow;
+  margin-top: 6rem;
+}
+.street-line-2 {
+  height: 0.3rem;
+  width: 2rem;
+  background-color: yellow;
+  margin-top: 6rem;
+}
+.street-line-3 {
+  height: 0.3rem;
+  width: 2rem;
+  background-color: yellow;
+  margin-top: 6rem;
+}
+.street-line-4 {
+  height: 0.3rem;
+  width: 2rem;
+  background-color: yellow;
+  margin-top: 6rem;
+}
+.street-line-5 {
+  height: 0.3rem;
+  width: 2rem;
+  background-color: yellow;
+  margin-top: 6rem;
+}
+.street-line-6 {
+  height: 0.3rem;
+  width: 2rem;
+  background-color: yellow;
+  margin-top: 6rem;
+}
+.street-line-7 {
+  height: 0.3rem;
+  width: 2rem;
+  background-color: yellow;
+  margin-top: 6rem;
+}
+.street-line-8 {
+  height: 0.3rem;
+  width: 2rem;
+  background-color: yellow;
+  margin-top: 6rem;
+}
+.street-line-9 {
+  height: 0.3rem;
+  width: 2rem;
+  background-color: yellow;
+  margin-top: 6rem;
+}
+.street-line-10 {
+  height: 0.3rem;
+  width: 2rem;
+  background-color: yellow;
+  margin-top: 6rem;
+}
+.street-line-11 {
+  height: 0.3rem;
+  width: 2rem;
+  background-color: yellow;
+  margin-top: 6rem;
+}
+
+#controls {
+  margin-top: -2rem;
+  text-align: center;
+}
+
+#controls button {
+  width: 9rem;
+  height: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin: 2rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px black;
+}
+
+#controls button:active {
+  box-shadow: 5px 5px 5px rgb(44, 43, 43);
+}
+
+.display {
+  display: flex;
+  height: 3rem;
+  width: 12rem;
+  background-color: black;
+
+  z-index: 16;
+
+  font-size: 2.5rem;
+  font-family: "Orbitron", sans-serif;
+  color: white;
+  border-radius: 5rem;
+
+  margin-left: 24rem;
+  margin-top: -8rem;
+}
+
+#car {
+  height: 12rem;
+  width: auto;
+  z-index: 18;
+  margin-top: -3rem;
+  position: absolute;
+  left: 0;
+  animation: none;
+}
+
+@keyframes move-car {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-0.5px, 0.5px);
+    transform: translate(-0.5px, 0.5px);
+  }
+  40% {
+    -webkit-transform: translate(-0.5px, -0.5px);
+    transform: translate(-0.5px, -0.5px);
+  }
+  60% {
+    -webkit-transform: translate(0.5px, 0.5px);
+    transform: translate(0.5px, 0.5px);
+  }
+  80% {
+    -webkit-transform: translate(0.5px, -0.5px);
+    transform: translate(0.5px, -0.5px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
