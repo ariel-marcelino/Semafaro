@@ -7,7 +7,7 @@ export let currentSpeed = carro.speed || 0;
 let streetRule = parseInt(routes.value);
 let carPosition = 0;
 const streetLimit = 71;
-//deixar o carro fluido ao andar
+
 export function accelerate() {
   if (currentSpeed < 180) {
     currentSpeed += 10;
@@ -23,7 +23,7 @@ export function accelerate() {
     // Reinicia a animação
 
     el.car.style.animation = `none`; // Remove a animação para reiniciá-la
-    el.car.style.animation = `move-car 0.3s ease forwards`; // Reaplica a animação
+    el.car.style.animation = `move-car 0.5s ease forwards`; // Reaplica a animação
     el.car.style.animation = `vibrate-1 0.3s linear infinite both`;
 
     // Ajusta a posição left para o progresso acumulado
@@ -35,7 +35,7 @@ export function accelerate() {
 
     if (carro.speed > streetRule) {
       alert(
-        `Sua velocidade atual ${carro.speed} km/h. Ultrapassou o limite da via <br> Game over!`
+        `Sua velocidade atual ${carro.speed} km/h. Ultrapassou o limite da via. Game over!`
       );
       restartGame();
     }
@@ -49,8 +49,6 @@ export function slowDown() {
     carro.speed = currentSpeed;
 
     el.display.innerText = `${carro.speed} KM/H`;
-
-    console.log(`Velocidade atual: ${carro.speed} km/h`);
 
     el.arrowWrapper.style.transform = `rotate(${carro.speed}deg)`;
   }

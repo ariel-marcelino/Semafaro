@@ -9,7 +9,6 @@ const randomTime = Math.random() * (15000 - 25000) + 15000;
 let resetTimeouts;
 
 export function restartGame() {
-  clearTimeout(resetTimeouts); // reseta os timeouts
   // Reseta a velocidade do carro
   carro.speed = 0;
 
@@ -38,7 +37,6 @@ export async function trafficLight() {
     currentLight = el.redLight;
     currentLight.style.backgroundColor = "red";
 
-    console.log(`${carro.speed}, chegamos aqui`);
     if (carro.speed > 0) {
       redRule();
       return;

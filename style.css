@@ -397,14 +397,17 @@ body {
   position: absolute;
   left: 0;
   animation: none;
+  transition: left 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 @keyframes move-car {
-  from {
+  0% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
-  to {
-    transform: translateX(100%);
+  100% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
   }
 }
 
